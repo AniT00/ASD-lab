@@ -1,0 +1,56 @@
+void pre_find(Node* root)
+	{
+		Node* cur = root;
+		//N
+		std::cout << cur->data << ", ";
+		//L
+		if (cur->left != nullptr)
+		{
+			pre_find(cur->left);
+		}
+		//R
+		if (cur->right != nullptr)
+		{
+			pre_find(cur->right);
+		}
+	}
+
+	T* post_find(Node* root)
+	{
+		Node* cur = root;
+		
+		//L
+		if (cur->left != nullptr)
+		{
+			post_find(cur->left);
+		}
+		//R
+		if (cur->right != nullptr)
+		{
+			post_find(cur->right);
+		}
+		//N
+		std::cout << cur->data << ", ";
+
+		return nullptr;
+	}
+
+	T* in_find(Node* root)
+	{
+		Node* cur = root;
+
+		//L
+		if (cur->left != nullptr)
+		{
+			in_find(cur->left);
+		}
+		//N
+		std::cout << cur->data << ", ";
+		//R
+		if (cur->right != nullptr)
+		{
+			in_find(cur->right);
+		}
+
+		return nullptr;
+	}
